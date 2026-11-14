@@ -379,6 +379,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ini{width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--green);font-weight:800;font-size:13px;display:grid;place-items:center}
 .person b{display:block;font-size:14px}.person span{font-size:12.5px;color:var(--muted)}
 .tbl table.big{min-width:1180px}
+.crit4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.crit4 div{border:1px solid var(--line);border-top:4px solid var(--green);border-radius:12px;padding:12px 14px;font-size:13.5px;color:var(--muted)}
+.crit4 b{display:block;color:var(--head);font-size:14.5px;margin-bottom:4px}
 .g4{grid-template-columns:repeat(4,minmax(0,1fr))}@media (max-width:1150px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.g4{grid-template-columns:1fr}}
 .tbl td .obj-p{display:inline-block;margin:0 3px 3px 0}
 </style>
@@ -472,7 +475,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <p class="lead">Ce n'est pas un tournage unique. La prestation se fait en deux interventions, chacune ciblée sur un film ; leurs rushes se complètent et rejoignent une même réserve d'images.</p>
   <div class="grid g3">
     <div class="box" style="border-top:4px solid #14573F"><div class="k">Intervention 1 · début octobre</div><p class="status" style="margin-top:6px">Réalisée</p><p style="font-size:14px;margin-top:6px">Rushes ciblés sur le film A, La Vie Universitaire en Amazonie. Inventaire à dresser lors du cadrage du 16 novembre.</p></div>
-    <div class="box" style="border-top:4px solid #13926E"><div class="k">Intervention 2 · dès le 16 novembre</div><p style="font-weight:700;margin-top:6px;color:var(--warn)">À préparer</p><p style="font-size:14px;margin-top:6px">Avec un vidéaste. Plans du film B : territoire et très gros plans, laboratoires de l'AIBSI, formation continue, visite chez un membre fondateur. Compléments du film A si l'inventaire en montre le besoin.</p></div>
+    <div class="box" style="border-top:4px solid #13926E"><div class="k">Intervention 2 · dès le 16 novembre</div><p style="font-weight:700;margin-top:6px;color:var(--warn)">À préparer</p><p style="font-size:14px;margin-top:6px">Avec un vidéaste. Plans du film B : territoire et très gros plans, laboratoires de l'AIBSI, formation continue et ses entreprises partenaires, plans chez un membre fondateur du BTP. Compléments du film A si l'inventaire en montre le besoin.</p></div>
     <div class="box" style="border-top:4px solid #A5CC78"><div class="k">Réserve d'images</div><p style="font-size:14px;margin-top:6px">Les rushes des deux interventions, nommés et indexés, cédés à la Fondation et à l'Université de Guyane.</p></div>
   </div>
   <div class="grid g2">
@@ -509,7 +512,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <div class="part-head"><div class="L">A</div><div><h2>Actions</h2><p>Trancher avant d'agir</p></div></div>
 <section class="sec">
   <h3><span class="n">8</span>Décisions à trancher</h3>
-  <p class="lead">Chaque décision a une personne qui tranche et une date. On coche une option ; le choix s'affiche pour toutes les personnes qui ouvrent la page.</p>
+  <p class="lead">Chaque décision a une personne qui tranche et une date, et se prend selon quatre critères. On coche une option ; le choix s'affiche pour toutes les personnes qui ouvrent la page.</p>
+  <div class="crit4">
+    <div><b>Disponible</b>Un créneau dans la fenêtre de tournage, confirmé par écrit.</div>
+    <div><b>Accessible</b>Proche d’un campus ou d’un autre lieu de la même journée ; accès sans autorisation longue.</div>
+    <div><b>Pertinent pour l’image</b>Sert un plan clé : activité visible, décor, lumière, cohérent avec la direction artistique.</div>
+    <div><b>Sobre pour le prestataire</b>Regroupé avec d’autres scènes du même site et de la même demi-journée ; on véhicule l’équipe si besoin.</div>
+  </div>
+  <p class="muted" style="font-size:13.5px;margin-top:10px">Une personne, une entreprise ou un lieu n’est retenu que s’il remplit les quatre critères.</p>
   <p class="sync" id="sync">Connexion à l'espace partagé…</p>
   <div class="tbl"><table class="dtab"><thead><tr><th>N°</th><th>À trancher</th><th>Tranche</th><th>Avant le</th><th>Options</th></tr></thead><tbody id="decBody"></tbody></table></div>
 </section></div></article>
@@ -543,7 +553,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <div class="tbl"><table>
     <thead><tr><th>Indicateur</th><th>Cible</th><th>Mesuré avec</th><th>Quand</th><th>Référent</th></tr></thead>
     <tbody>
-      <tr><td>Décisions DC1 à DC10 tranchées</td><td>10 sur 10</td><td>Décisions à trancher</td><td>Jeu 19/11</td><td>Anaïse CONSTANT</td></tr>
+      <tr><td>Décisions DC1 à DC11 tranchées</td><td>11 sur 11</td><td>Décisions à trancher</td><td>Jeu 19/11</td><td>Anaïse CONSTANT</td></tr>
+      <tr><td>Lieux regroupés par site et par demi-journée</td><td>Aucun aller-retour évitable</td><td>R4 · feuilles de service</td><td>Jeu 19/11</td><td>Anaïse CONSTANT</td></tr>
       <tr><td>Cession des droits du vidéaste signée</td><td>Avant le premier jour</td><td>R5 · attestation de cession</td><td>Avant tournage</td><td>Tarek BASRI</td></tr>
       <tr><td>Personnes identifiables filmées avec autorisation</td><td>100 %</td><td>R1 · registre des autorisations</td><td>Chaque soir de tournage</td><td>Anaïse CONSTANT</td></tr>
       <tr><td>Plans clés tournés</td><td>Les 12 plans des deux films</td><td>R4 · feuilles de service, dérushage</td><td>Fin de tournage</td><td>Tarek BASRI</td></tr>
@@ -601,7 +612,7 @@ const PERS=[
   s:["A1","A3","A6"],res:"Vie étudiante sur le vif : bibliothèque, restaurant universitaire, sport, associations",ref:["Honorine SAMSON","BRI"]},
  {n:"Claire, 52 ans",r:"Dirigeante d’une entreprise implantée en Guyane · film B, version locale",q:"« Pourquoi soutiendrais-je l’université plutôt qu’autre chose ? »",
   av:["#5a3825","#1a0f08","bun","#14573F",0],o:["O5"],t:["M1","M2"],j:["Accord écrit de l’entreprise (R3)","Autorisations signées (R1)"],
-  s:["B5","B6"],res:"Visite d’étudiants chez un membre fondateur, talents au travail",ref:["Moïra YENOT","Fondation"]},
+  s:["B5","B6"],res:"Plans chez un membre fondateur du BTP : chantier, savoir-faire, rencontre avec la direction",ref:["Moïra YENOT","Fondation"]},
  {n:"Daniel, 48 ans",r:"Directeur RSE d’un groupe international · film B, version internationale",q:"« Qu’est-ce que je trouve là, et nulle part ailleurs ? »",
   av:["#6e4430","#141010","short","#d9f2ea",1],o:["O5","O2"],t:["FC2","FC5","P3"],j:["Accord du port spatial (R3)","Plans aériens tournés (R4)"],
   s:["B1","B2","B3"],res:"Territoire vu du ciel, contrastes forêt et espace, très gros plans",ref:["Anaïse CONSTANT","Fondation"]},
@@ -631,7 +642,7 @@ const SEQ_B=[
  ["B3","0:30 – 0:45","Le potentiel, pointe de l’entonnoir","macro",["Biodiversité, jeunesse, savoir-faire, ouverture sur l’Amazonie et les Caraïbes : la Guyane a entre les mains de quoi construire son avenir. Encore faut-il le révéler.","Biodiversité, pharmacopée, savoirs, jeunesse : ce que la planète cherche, la Guyane le contient déjà. Dans l’infiniment petit d’une graine, d’un geste, d’une molécule, se joue l’infiniment grand."],"Le rythme ralentit. Les plans se resserrent jusqu’au macro : une graine, une feuille, une goutte d’eau, une lame au microscope, un geste d’artisan. Le moment le plus serré du film.","Très gros plan · macro"],
  ["B4","0:45 – 1:02","L’université","field",["C’est le rôle de l’Université de Guyane : former les talents du territoire et produire, sur place, des connaissances utiles à celles et ceux qui y vivent et y investissent.","L’Université de Guyane forme ici les talents et produit les connaissances dont le monde a besoin. Une recherche de terrain, dans un cadre européen, qui reconnaît et partage les savoirs de celles et ceux qui l’ont précédée."],"Bâtiments des trois campus, coursives, amphithéâtre, laboratoires de l’AIBSI, recherche de terrain en forêt, échanges entre chercheurs et habitants avec leur accord.","Plan américain · chercheuse en forêt"],
  ["B5","1:02 – 1:16","Les talents","training",["Ses étudiantes et étudiants seront vos collaborateurs, vos partenaires, vos futurs dirigeants. Ils connaissent ce territoire de l’intérieur.","Ses étudiantes et étudiants parlent plusieurs langues, naviguent entre les cultures et connaissent l’Amazonie de l’intérieur. Des talents rares, pour un monde qui en a besoin."],"Vie étudiante sur le vif, travail en groupe, stagiaires de la formation continue et alternants en entreprise avec la DFPU, échanges avec des professionnels.","Plan moyen · stagiaire en atelier"],
- ["B6","1:16 – 1:30","L’engagement","visit",["La Fondation de l’Université de Guyane relie les entreprises à cette force vive. Devenir mécène, c’est investir là où l’avenir de notre territoire se prépare.","La Fondation de l’Université de Guyane vous ouvre ce territoire. Devenir mécène, c’est donner à vos engagements un terrain unique, et une portée mondiale."],"Visite d’étudiants chez un membre fondateur, échange avec des professionnels, puis retour au plan aérien du territoire à l’heure dorée : le dernier plan contient le premier.","Plan moyen · visite sur chantier"]
+ ["B6","1:16 – 1:30","L’engagement","visit",["La Fondation de l’Université de Guyane relie les entreprises à cette force vive. Devenir mécène, c’est investir là où l’avenir de notre territoire se prépare.","La Fondation de l’Université de Guyane vous ouvre ce territoire. Devenir mécène, c’est donner à vos engagements un terrain unique, et une portée mondiale."],"Plans dans les entreprises : chez un membre fondateur du BTP (chantier, savoir-faire, équipes au travail) et chez des entreprises partenaires de la formation continue ; puis retour au plan aérien du territoire à l’heure dorée : le dernier plan contient le premier.","Plan moyen · chantier d’un membre fondateur"]
 ];
 const RES=[
  ["R1","Autorisation de droit à l’image","Une par personne identifiable, signée avant la prise de vue",["Identité de la personne, et de ses représentants légaux pour un mineur","Bénéficiaires : la Fondation de l’Université de Guyane et l’Université de Guyane","Date, lieu et nature de la prise de vue : image, vidéo, son","Usages et supports : web, réseaux sociaux, print, presse, vidéo, affichage","Durée et territoire de l’autorisation","Caractère gratuit","Droits de la personne et contact pour demander le retrait des usages futurs","Date et signature"],"Anaïse CONSTANT","Service juridique UG",1],
@@ -654,7 +665,7 @@ const ENT=[
   ["FC8","Caler les textes des voix off sur le premier montage ; faire relire la version internationale par des natifs","Fin novembre","Longueur égale des deux versions par séquence","",["P4"]],
   ["FC9","Centraliser les retours, un tour de corrections par film","Début décembre","Un envoi groupé par film","R7",["M2","UC1","U1"]]]},
  {k:"mec",n:"Fondation · Mécénat",w:"Moïra YENOT",t:[
-  ["M1","Solliciter un membre fondateur pour une visite d’étudiants sur site : La Brique de Guyane pour le BTP, sinon 2Ter Habitat ou EDF","Mer 18/11","Accord écrit de l’entreprise","R3",["FC2"]],
+  ["M1","Ouvrir l’accès à un membre fondateur du BTP pour des plans en entreprise : chantier, savoir-faire, rencontre avec la direction. La Brique de Guyane, sinon 2Ter Habitat ou EDF","Mer 18/11","Accord écrit de l’entreprise","R3",["FC2"]],
   ["M2","Valider le script puis le montage du film B, avec le président de la Fondation","18/11 puis fin novembre","Retour en un seul envoi","R7",["FC4","P4"]]]},
  {k:"bri",n:"BRI",w:"Honorine SAMSON",t:[
   ["B0","Transmettre les modèles d’autorisation et de recensement que le BRI utilise déjà, s’il en a","Lun 16/11","Avant la diffusion des modèles","R1, R2",[]],
@@ -662,7 +673,7 @@ const ENT=[
   ["B2","Faire signer les autorisations des étudiants avant chaque prise de vue","Tournage","Autorisations remises chaque soir","R1",["FC3","B1"]],
   ["B3","Assurer le relais de référente les jours où la Fondation est absente","Tournage","Présence sur toute la journée prévue","R4",["FC6"]]]},
  {k:"dfpu",n:"DFPU · Formation continue",w:"Marielle PINEAU, Siddy CISSE · ouverture des cours et des entreprises",t:[
-  ["D1","Ouvrir l’accès aux cours de formation continue et aux entreprises d’accueil : sessions filmables, stagiaires, formateurs","Mer 18/11","Accord des stagiaires et des entreprises","R2, R3",["FC2","FC3"]],
+  ["D1","Ouvrir l’accès aux cours de formation continue et mettre en avant des entreprises partenaires : sessions filmables, stagiaires, formateurs, entreprises d’accueil","Mer 18/11","Accord des stagiaires et des entreprises","R2, R3",["FC2","FC3"]],
   ["D2","Faire signer les autorisations des stagiaires et des entreprises filmés","Tournage","Autorisations remises chaque soir","R1, R3",["FC3","D1"]]]},
  {k:"aibsi",n:"AIBSI · Laboratoires",w:"Sonia CAYEMITTES, Suzanne HERNANDEZ · ouverture des laboratoires",t:[
   ["AI1","Ouvrir l’accès aux laboratoires et aux chercheurs : manipulations filmables et très gros plans (graine, échantillon, lame au microscope)","Mer 18/11","Créneaux et accès confirmés par écrit","R2, R3",["FC2","FC3"]],
@@ -732,14 +743,14 @@ const PERS_P=["A","A","B","B","AB","AB","C"];
 const PERS_J=[[["Fiche des volontaires","R2"],["Autorisations signées","R1"]],[["Accord du CROUS","R3"],["Autorisations signées","R1"]],[["Accord écrit de l’entreprise","R3"],["Autorisations signées","R1"]],[["Accord du port spatial","R3"],["Feuilles de service des plans aériens","R4"]],[["Autorisations des stagiaires","R1"],["Accord de l’entreprise d’accueil","R3"]],[["Autorisations des chercheurs","R1"],["Accès au laboratoire confirmé","R3"]],[["Attestation de cession","R5"],["Tableau d’indexation","R6"]]];
 const TASK_P={B1:"A",B2:"A",B4:"A",M1:"B",M2:"B",UC1:"A",U1:"A"};
 const TOBJ={FC1:["O1"],FC2:["O1","O2"],FC3:["O3"],FC4:["O1","O6"],FC5:["O2"],FC6:["O1","O2"],FC7:["O3"],FC8:["O5"],FC9:["O1"],M1:["O5"],M2:["O5"],B0:["O3"],B1:["O4"],B2:["O3"],B3:["O1"],B4:["O4"],D1:["O6"],D2:["O3"],AI1:["O6"],AI2:["O6"],AI3:["O6"],U3:["O3"],U2:["O2"],UC1:["O4"],U1:["O4"],P1:["O1"],P2:["O3"],P3:["O1","O2"],P4:["O1"],P5:["O1","O3"]};
-const TLIV={FC1:"Liste des référents et compte rendu du point",FC2:"Liste des plans clés validée, dates du vidéaste",FC3:"Modèles R1 et R2 diffusés",FC4:"Scripts version 2",FC5:"Accords écrits ou décision de retrait",FC6:"Feuilles de service par journée",FC7:"Registre des autorisations à jour",FC8:"Textes définitifs des voix off",FC9:"Grilles de validation signées",M1:"Accord de tournage de l’entreprise",M2:"Grille de validation du film B",B0:"Modèles existants du BRI",B1:"Fiche des volontaires",B2:"Autorisations signées",B3:"Présence assurée, registre tenu",B4:"Grille de validation du film A",D1:"Fiche des sessions et des volontaires",D2:"Autorisations des stagiaires et des entreprises",AI1:"Liste des laboratoires et créneaux",AI2:"Voix off relues et annotées",AI3:"Autorisations des chercheurs",U3:"Modèle d’autorisation validé",U2:"Créneaux d’accès confirmés",UC1:"Charte et logo UG pour l’écran final",U1:"Validation écrite du film A",P1:"Calendrier du vidéaste",P2:"Attestation de cession signée",P3:"Rushes des plans clés",P4:"Rushes indexés et premiers montages",P5:"Films, déclinaisons, rushes et autorisations"};
+const TLIV={FC1:"Liste des référents et compte rendu du point",FC2:"Liste des plans clés validée, dates du vidéaste",FC3:"Modèles R1 et R2 diffusés",FC4:"Scripts version 2",FC5:"Accords écrits ou décision de retrait",FC6:"Feuilles de service par journée",FC7:"Registre des autorisations à jour",FC8:"Textes définitifs des voix off",FC9:"Grilles de validation signées",M1:"Accord de tournage du membre fondateur",M2:"Grille de validation du film B",B0:"Modèles existants du BRI",B1:"Fiche des volontaires",B2:"Autorisations signées",B3:"Présence assurée, registre tenu",B4:"Grille de validation du film A",D1:"Fiche des sessions et des volontaires",D2:"Autorisations des stagiaires et des entreprises",AI1:"Liste des laboratoires et créneaux",AI2:"Voix off relues et annotées",AI3:"Autorisations des chercheurs",U3:"Modèle d’autorisation validé",U2:"Créneaux d’accès confirmés",UC1:"Charte et logo UG pour l’écran final",U1:"Validation écrite du film A",P1:"Calendrier du vidéaste",P2:"Attestation de cession signée",P3:"Rushes des plans clés",P4:"Rushes indexés et premiers montages",P5:"Films, déclinaisons, rushes et autorisations"};
 const TWIN={FC1:"Lun 16/11, matin",FC2:"Lun 16/11",FC3:"Lun 16/11",FC4:"Mar 17/11",FC5:"16 au 17/11",FC6:"Jeu 19/11",FC7:"Pendant le tournage",FC8:"Après les premiers montages",FC9:"Début décembre",M1:"16 au 18/11",M2:"18/11, puis fin novembre",B0:"Lun 16/11, matin",B1:"16 au 18/11",B2:"Pendant le tournage",B3:"Pendant le tournage",B4:"17/11, puis fin novembre",D1:"16 au 18/11",D2:"Pendant le tournage",AI1:"16 au 18/11",AI2:"17/11, puis fin novembre",AI3:"Pendant le tournage",U3:"Lun 16/11",U2:"16 au 18/11",UC1:"16 au 18/11",U1:"Début décembre",P1:"Lun 16/11, matin",P2:"Avant le premier jour",P3:"Dates du vidéaste",P4:"Fin novembre",P5:"Mi-décembre"};
 const TREF={FC1:"Anaïse CONSTANT",FC2:"Anaïse CONSTANT",FC3:"Anaïse CONSTANT",FC4:"Anaïse CONSTANT",FC5:"Anaïse CONSTANT",FC6:"Anaïse CONSTANT",FC7:"Anaïse CONSTANT",FC8:"Anaïse CONSTANT",FC9:"Anaïse CONSTANT",M1:"Moïra YENOT",M2:"Moïra YENOT",B0:"Honorine SAMSON",B1:"Honorine SAMSON",B2:"Honorine SAMSON",B3:"Honorine SAMSON",B4:"Honorine SAMSON",D1:"Siddy CISSE",D2:"Siddy CISSE",AI1:"Sonia CAYEMITTES",AI2:"Suzanne HERNANDEZ",AI3:"Sonia CAYEMITTES",U3:"Service juridique UG",U2:"Directions de composantes",UC1:"Service communication UG",U1:"Martine SÉBÉLOUÉ",P1:"Tarek BASRI",P2:"Tarek BASRI",P3:"Tarek BASRI",P4:"Tarek BASRI",P5:"Tarek BASRI"};
 const SHORT={FC1:"Point de lancement",FC2:"Cadrage prestataire",FC3:"Diffuser R1 et R2",FC4:"Scripts V2",FC5:"Accords CROUS, spatial",FC6:"Feuilles de service",FC7:"Référente terrain",FC8:"Textes des voix off",FC9:"Retours groupés",M1:"Membre fondateur",M2:"Valider film B",B0:"Modèles du BRI",B1:"Étudiants volontaires",B2:"Autorisations étudiants",B3:"Relais référente",B4:"Valider film A",D1:"Sessions FPC",D2:"Autorisations FPC",AI1:"Laboratoires",AI2:"Relecture scientifique",AI3:"Tournage labo",U3:"Modèle d’autorisation",U2:"Accès aux salles",UC1:"Charte UG",U1:"Validation finale A",P1:"Dates du vidéaste",P2:"Cession des droits",P3:"Tournage",P4:"Premiers montages",P5:"Livraison"};
 const ECO=[
  {k:"fug",n:"Fondation de l’Université de Guyane",r:"Porte la dépense et coordonne",side:"l",give:["Financement de la prestation","Coordination et scripts","Réseau des membres fondateurs"],gain:["Une réserve d’images authentiques","Le film B, outil de prospection mécénat","La preuve de ce qu’elle apporte à l’université"]},
  {k:"bri",n:"BRI",r:"Relations internationales",side:"l",give:["L’accès aux étudiants volontaires, dont internationaux","Ses modèles de documents existants"],gain:["Un film qui présente l’université aux partenaires","Un argument pour la mobilité des étudiants guyanais"]},
- {k:"dfpu",n:"DFPU",r:"Formation professionnelle continue",side:"l",give:["L’accès aux cours de formation continue","L’accès aux entreprises d’accueil et partenaires"],gain:["Son offre de formation continue visible auprès des entreprises","Des stagiaires et formateurs mis en valeur"]},
+ {k:"dfpu",n:"DFPU",r:"Formation professionnelle continue",side:"l",give:["L’accès aux cours de formation continue","La mise en avant de ses entreprises partenaires"],gain:["Son offre de formation continue visible auprès des entreprises","Des stagiaires et formateurs mis en valeur"]},
  {k:"aibsi",n:"AIBSI",r:"Recherche et innovation",side:"r",give:["L’accès aux laboratoires et aux chercheurs","L’accès aux terrains de recherche"],gain:["Sa recherche visible dans les deux films","Ses laboratoires présentés aux mécènes"]},
  {k:"ug",n:"Université de Guyane",r:"Administration provisoire et services",side:"r",give:["Accès aux campus et aux salles","Charte, cadre juridique et validation"],gain:["Une image d’attractivité en Guyane et à l’international","Une réserve d’images dont elle est bénéficiaire","Le soutien de France 2030 mis en avant"]},
  {k:"pre",n:"Tarek BASRI",r:"Prestataire",side:"r",give:["Une réalisation de niveau premium","Un vidéaste, le drone et le montage"],gain:["Deux films signés à son nom","De la visibilité auprès de l’université et de ses partenaires"]}
@@ -748,7 +759,7 @@ const DEC=[
  ["DC1","Répartition territoire et scènes humaines du film A",["Territoire 30 % · humain 70 %","40 % · 60 %","20 % · 80 %"],0,"Anaïse CONSTANT avec Tarek BASRI","Lun 16/11","A","FC2"],
  ["DC2","Répartition territoire et scènes humaines du film B",["Territoire 50 % · humain 50 %","60 % · 40 %","40 % · 60 %"],0,"Anaïse CONSTANT avec Tarek BASRI","Lun 16/11","B","FC2"],
  ["DC3","Modèle d’autorisation de droit à l’image",["Modèle du BRI, étoffé si besoin","Modèle existant de l’UG","Nouveau modèle de la Fondation"],0,"Honorine SAMSON avec le service juridique","Lun 16/11","C","FC3"],
- ["DC4","Membre fondateur qui accueille la visite d’étudiants",["La Brique de Guyane","2Ter Habitat","EDF","Nofrayane"],0,"Moïra YENOT","Mer 18/11","B","M1"],
+ ["DC4","Membre fondateur qui ouvre ses portes au tournage",["La Brique de Guyane","2Ter Habitat","EDF","Nofrayane"],0,"Moïra YENOT","Mer 18/11","B","M1"],
  ["DC5","Plans du port spatial",["Accord demandé","Images de banques officielles","Plans retirés"],-1,"Anaïse CONSTANT","Mar 17/11","B","FC5"],
  ["DC6","Scène du restaurant universitaire",["Accord du CROUS","Autre lieu convivial","Scène retirée"],-1,"Anaïse CONSTANT","Mar 17/11","A","FC5"],
  ["DC7","Voix off du film A",["Voix féminine","Voix masculine"],-1,"Moïra YENOT et Anaïse CONSTANT","Mar 17/11","A","FC4"],
@@ -759,10 +770,22 @@ const DEC=[
 const STATUS=["Acceptée","À réassigner","Bloquée","Faite"];
 const STRAT={
  A:{bar:[30,70],lab:"Territoire, campus, drone",energy:"Rythmée, lumineuse, caméra au plus près des gens",voice:"Une voix off, jeune et chaleureuse ; sous-titres en anglais",own:["Vie étudiante sur le vif : bibliothèque, restaurant universitaire, sport, associations","Étudiants internationaux et préparatifs de mobilité","Composantes, cours, stagiaires de la formation continue"],end:"Rejoindre l’université et accueillir ses étudiants",dc:"DC1",iv:"Base : rushes de l’intervention 1, début octobre. Compléments pendant l’intervention 2 si l’inventaire en montre le besoin."},
- B:{bar:[50,50],lab:"Territoire, macro, drone",energy:"Ample, posée puis montante ; lenteur maîtrisée",voice:"Deux versions sur le même montage : locale en français pour le tissu guyanais, nationale et internationale en plusieurs langues",own:["Contrastes forêt et port spatial, marché et laboratoire","Très gros plans : graine, geste, molécule","Visite d’étudiants chez un membre fondateur, alternance en entreprise"],end:"Soutenir, avec la Fondation, les projets qui révèlent le potentiel guyanais",dc:"DC2",iv:"Tourné pendant l’intervention 2, dès la semaine du 16 novembre, avec un vidéaste. Quelques rushes d’octobre peuvent servir."}
+ B:{bar:[50,50],lab:"Territoire, macro, drone",energy:"Ample, posée puis montante ; lenteur maîtrisée",voice:"Deux versions sur le même montage : locale en français pour le tissu guyanais, nationale et internationale en plusieurs langues",own:["Contrastes forêt et port spatial, marché et laboratoire","Très gros plans : graine, geste, molécule","Plans chez un membre fondateur du BTP et chez des entreprises partenaires de la formation continue"],end:"Soutenir, avec la Fondation, les projets qui révèlent le potentiel guyanais",dc:"DC2",iv:"Tourné pendant l’intervention 2, dès la semaine du 16 novembre, avec un vidéaste. Quelques rushes d’octobre peuvent servir."}
 };
 RES.forEach(r=>{});
 
+/* ---------- Critères et déplacements ---------- */
+(function(){
+ const fug=ENT.find(e=>e.k==="fug").t, i=fug.findIndex(t=>t[0]==="FC6");
+ fug.splice(i,0,["FC10","Organiser les déplacements : regrouper les lieux par site et par demi-journée, privilégier les entreprises proches des campus, proposer de véhiculer l’équipe si besoin","17 au 19/11","Aucun aller-retour évitable pour le prestataire","R4",["M1","D1","AI1","U2"]]);
+ fug.find(t=>t[0]==="FC6")[5].push("FC10");
+ const m1=ENT.find(e=>e.k==="mec").t.find(t=>t[0]==="M1"); m1[3]="Accord écrit ; entreprise disponible, proche d’un campus et pertinente pour l’image";
+ const d1=ENT.find(e=>e.k==="dfpu").t.find(t=>t[0]==="D1"); d1[3]="Accord des stagiaires et des entreprises ; lieux proches d’un campus, regroupables sur une demi-journée";
+ Object.assign(TOBJ,{FC10:["O1"]});Object.assign(TLIV,{FC10:"Plan de déplacements intégré aux feuilles de service"});
+ Object.assign(TWIN,{FC10:"17 au 19/11"});Object.assign(TREF,{FC10:"Anaïse CONSTANT"});Object.assign(SHORT,{FC10:"Déplacements"});
+ DEC.push(["DC11","Transport de l’équipe de tournage vers les entreprises et les laboratoires",["Véhicule proposé par la Fondation","Déplacements par le prestataire","Covoiturage avec les référents"],-1,"Anaïse CONSTANT","Mer 18/11","C","FC10"]);
+ const r4=RES.find(r=>r[0]==="R4"); r4[3].splice(2,0,"Trajets entre les lieux et moyen de transport de l’équipe");
+})();
 /* ---------- État ---------- */
 const state={dec:{},task:{}};let dbRef=null;
 let proj="all",cur="all";
